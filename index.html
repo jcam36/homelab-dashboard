@@ -84,26 +84,47 @@
 
             <div class="card-grid">
 
-                <article class="dashboard-card">
-                    <h3>Linux Labs</h3>
-                    <p>Filesystem, permissions, users, services, and logs.</p>
+                <article class="dashboard-card status-card">
+                    <div class="card-top-row">
+                        <p class="card-label">Hostname</p>
+                        <span class="card-status online">Online</span>
+                    </div>
+
+                    <h3>homelab</h3>
+                    <p>Ubuntu Server VM hosted on the Mac mini.</p>
                 </article>
 
-                <article class="dashboard-card">
-                    <h3>Docker Labs</h3>
-                    <p>Images, containers, volumes, networks, and Compose.</p>
+                <article class="dashboard-card status-card">
+                    <div class="card-top-row">
+                        <p class="card-label">Operating System</p>
+                        <span class="card-status">ARM64</span>
+                    </div>
+
+                    <h3>Ubuntu Server 26.04</h3>
+                    <p>Running in VMware Fusion.</p>
                 </article>
 
-                <article class="dashboard-card">
-                    <h3>Networking</h3>
-                    <p>IP addressing, DNS, ports, routing, and troubleshooting.</p>
+                <article class="dashboard-card status-card">
+                    <div class="card-top-row">
+                        <p class="card-label">Web Server</p>
+                        <span class="card-status online">Running</span>
+                    </div>
+
+                    <h3>Nginx</h3>
+                    <p>Serving the homelab dashboard over HTTP.</p>
                 </article>
 
-                <article class="dashboard-card">
-                    <h3>Python Labs</h3>
-                    <p>Automation, scripting, APIs, and administration tools.</p>
+                <article class="dashboard-card status-card">
+                    <div class="card-top-row">
+                        <p class="card-label">Containers</p>
+                        <span class="card-status online">Running</span>
+                    </div>
+
+                    <h3>Docker</h3>
+                    <p>Ready for containerized services and applications.</p>
                 </article>
 
+            </div>
             </div>
 
         </section>
@@ -121,18 +142,14 @@
 
             <div class="quick-links">
 
-                <a class="quick-link"
-                    href="https://github.com/jcam36"
-                    target="_blank">
+                <a class="quick-link" href="https://github.com/jcam36" target="_blank">
 
                     <span>GitHub</span>
                     <small>View repositories</small>
 
                 </a>
 
-                <a class="quick-link"
-                    href="http://192.168.74.129"
-                    target="_blank">
+                <a class="quick-link" href="http://192.168.74.129" target="_blank">
 
                     <span>Nginx Dashboard</span>
                     <small>Open this server</small>
