@@ -3,15 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose's Homelab</title>
+
+    <title>Jose's Homelab Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
+
 <body>
-    <h1>Jose's Homelab</h1>
-    <p>This page is being served by Nginx on Ubuntu.</p>
-    <ul>
-        <li>Hostname: homelab</li>
-        <li>Web server: Nginx</li>
-        <li>Docker: Installed</li>
-    </ul>
+    <header class="site-header">
+        <div>
+            <p class="eyebrow">Home Server</p>
+            <h1>Jose's Homelab Dashboard</h1>
+            <p class="subtitle">
+                Ubuntu Server, Docker, Nginx, networking, and development labs.
+            </p>
+        </div>
+
+        <div class="status-badge">
+            <span class="status-dot"></span>
+            Homelab Online
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <section class="dashboard-section">
+            <div class="section-heading">
+                <h2>Server Overview</h2>
+                <p>Current homelab configuration</p>
+            </div>
+
+            <div class="card-grid">
+                <article class="dashboard-card">
+                    <p class="card-label">Hostname</p>
+                    <h3>homelab</h3>
+                    <p>Ubuntu Server VM hosted on the Mac mini.</p>
+                </article>
+
+                <article class="dashboard-card">
+                    <p class="card-label">Operating System</p>
+                    <h3>Ubuntu Server 26.04</h3>
+                    <p>ARM64 virtual machine running in VMware Fusion.</p>
+                </article>
+
+                <article class="dashboard-card">
+                    <p class="card-label">Web Server</p>
+                    <h3>Nginx</h3>
+                    <p>Serving the homelab dashboard over HTTP.</p>
+                </article>
+
+                <article class="dashboard-card">
+                    <p class="card-label">Containers</p>
+                    <h3>Docker</h3>
+                    <p>Ready for containerized services and applications.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="dashboard-section">
+            <div class="section-heading">
+                <h2>Lab Areas</h2>
+                <p>Projects and learning environments</p>
+            </div>
+
+            <div class="card-grid">
+                <article class="dashboard-card">
+                    <h3>Linux Labs</h3>
+                    <p>Filesystem, permissions, users, services, and logs.</p>
+                </article>
+
+                <article class="dashboard-card">
+                    <h3>Docker Labs</h3>
+                    <p>Images, containers, volumes, networks, and Compose.</p>
+                </article>
+
+                <article class="dashboard-card">
+                    <h3>Networking</h3>
+                    <p>IP addressing, DNS, ports, routing, and troubleshooting.</p>
+                </article>
+
+                <article class="dashboard-card">
+                    <h3>Python Labs</h3>
+                    <p>Automation, scripting, APIs, and administration tools.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built and hosted on Jose's Ubuntu homelab.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/charts.js"></script>
 </body>
 </html>
