@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,13 @@
 </head>
 
 <body>
+
     <header class="site-header">
         <div>
             <p class="eyebrow">Home Server</p>
             <h1>Jose's Homelab Dashboard</h1>
             <p class="subtitle">
-                Ubuntu Server, Docker, Nginx, networking, and development labs.
+                Ubuntu Server, Docker, Nginx, Networking, and Development Labs.
             </p>
         </div>
 
@@ -27,13 +29,20 @@
     </header>
 
     <main class="dashboard">
+
+        <!-- =============================
+             Server Overview
+        ============================== -->
+
         <section class="dashboard-section">
+
             <div class="section-heading">
                 <h2>Server Overview</h2>
                 <p>Current homelab configuration</p>
             </div>
 
             <div class="card-grid">
+
                 <article class="dashboard-card">
                     <p class="card-label">Hostname</p>
                     <h3>homelab</h3>
@@ -57,16 +66,24 @@
                     <h3>Docker</h3>
                     <p>Ready for containerized services and applications.</p>
                 </article>
+
             </div>
+
         </section>
 
+        <!-- =============================
+             Lab Areas
+        ============================== -->
+
         <section class="dashboard-section">
+
             <div class="section-heading">
                 <h2>Lab Areas</h2>
                 <p>Projects and learning environments</p>
             </div>
 
             <div class="card-grid">
+
                 <article class="dashboard-card">
                     <h3>Linux Labs</h3>
                     <p>Filesystem, permissions, users, services, and logs.</p>
@@ -86,15 +103,69 @@
                     <h3>Python Labs</h3>
                     <p>Automation, scripting, APIs, and administration tools.</p>
                 </article>
+
             </div>
+
         </section>
+
+        <!-- =============================
+             Quick Links
+        ============================== -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+                <h2>Quick Links</h2>
+                <p>Frequently used homelab resources</p>
+            </div>
+
+            <div class="quick-links">
+
+                <a class="quick-link"
+                    href="https://github.com/jcam36"
+                    target="_blank">
+
+                    <span>GitHub</span>
+                    <small>View repositories</small>
+
+                </a>
+
+                <a class="quick-link"
+                    href="http://192.168.74.129"
+                    target="_blank">
+
+                    <span>Nginx Dashboard</span>
+                    <small>Open this server</small>
+
+                </a>
+
+                <a class="quick-link disabled" href="#">
+
+                    <span>Portainer</span>
+                    <small>Coming Soon</small>
+
+                </a>
+
+                <a class="quick-link disabled" href="#">
+
+                    <span>Grafana</span>
+                    <small>Coming Soon</small>
+
+                </a>
+
+            </div>
+
+        </section>
+
     </main>
 
     <footer class="site-footer">
-        <p>Built and hosted on Jose's Ubuntu homelab.</p>
+        <p>Built and hosted on Jose Camarena's Ubuntu Homelab.</p>
     </footer>
 
     <script src="js/script.js"></script>
     <script src="js/charts.js"></script>
+
 </body>
+
 </html>
