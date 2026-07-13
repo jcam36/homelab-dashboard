@@ -79,45 +79,69 @@
 
             <div class="metrics-grid">
                 <article class="metric-card">
-                    <div class="metric-heading">
-                        <span>CPU Usage</span>
-                        <strong id="cpu-value">12%</strong>
+                    <div class="metric-card-header">
+                        <span class="metric-label">CPU Usage</span>
+                        <span class="metric-status status-normal">Normal</span>
                     </div>
 
-                    <div class="metric-bar">
-                        <div class="metric-fill" style="width: 12%;"></div>
+                    <strong class="metric-value" id="cpu-value">12%</strong>
+
+                    <div class="metric-bar" aria-label="CPU usage: 12 percent">
+                        <div class="metric-fill" id="cpu-bar" style="width: 12%;">
+                        </div>
                     </div>
+
+                    <p class="metric-note">Current processor load</p>
                 </article>
 
                 <article class="metric-card">
-                    <div class="metric-heading">
-                        <span>Memory Usage</span>
-                        <strong id="memory-value">32%</strong>
+                    <div class="metric-card-header">
+                        <span class="metric-label">Memory Usage</span>
+                        <span class="metric-status status-normal">Normal</span>
                     </div>
 
-                    <div class="metric-bar">
-                        <div class="metric-fill" style="width: 32%;"></div>
+                    <strong class="metric-value" id="memory-value">32%</strong>
+
+                    <div class="metric-bar" aria-label="Memory usage: 32 percent">
+                        <div class="metric-fill" id="memory-bar" style="width: 32%;">
+                        </div>
                     </div>
+
+                    <p class="metric-note">System memory currently in use</p>
                 </article>
 
                 <article class="metric-card">
-                    <div class="metric-heading">
-                        <span>Disk Usage</span>
-                        <strong id="disk-value">28%</strong>
+                    <div class="metric-card-header">
+                        <span class="metric-label">Disk Usage</span>
+                        <span class="metric-status status-normal">Healthy</span>
                     </div>
 
-                    <div class="metric-bar">
-                        <div class="metric-fill" style="width: 28%;"></div>
+                    <strong class="metric-value" id="disk-value">28%</strong>
+
+                    <div class="metric-bar" aria-label="Disk usage: 28 percent">
+                        <div class="metric-fill" id="disk-bar" style="width: 28%;">
+                        </div>
                     </div>
+
+                    <p class="metric-note">Primary storage utilization</p>
                 </article>
 
                 <article class="metric-card">
-                    <div class="metric-heading">
-                        <span>Uptime</span>
-                        <strong id="uptime-value">3 hours</strong>
+                    <div class="metric-card-header">
+                        <span class="metric-label">System Uptime</span>
+                        <span class="metric-status status-online">Online</span>
                     </div>
 
-                    <p class="metric-note">Placeholder data for now</p>
+                    <strong class="metric-value metric-value-text" id="uptime-value">
+                        3 hours
+                    </strong>
+
+                    <div class="uptime-indicator">
+                        <span class="uptime-dot"></span>
+                        Server operating normally
+                    </div>
+
+                    <p class="metric-note">Time since the last system restart</p>
                 </article>
             </div>
         </section>

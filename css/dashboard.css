@@ -218,39 +218,73 @@
 
 .metrics-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
 }
 
 .metric-card {
-    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 210px;
+    padding: 1.4rem;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 12px;
+    border-radius: 16px;
+    overflow: hidden;
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
 }
 
-.metric-heading {
+.metric-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .22);
+}
+
+.metric-card-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     gap: 1rem;
-    margin-bottom: 1rem;
 }
 
-.metric-heading span {
+.metric-label {
     color: var(--muted);
     font-size: .9rem;
+    font-weight: 600;
 }
 
-.metric-heading strong {
+.metric-status {
+    padding: .3rem .65rem;
+    border: 1px solid rgba(34, 197, 94, .4);
+    border-radius: 999px;
+    color: #86efac;
+    background: rgba(34, 197, 94, .08);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.metric-value {
+    display: block;
+    margin: 1.2rem 0 1rem;
     color: var(--text);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1;
+}
+
+.metric-value-text {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
 }
 
 .metric-bar {
     width: 100%;
-    height: 8px;
+    height: 9px;
     overflow: hidden;
-    background: var(--surface-light);
+    background: rgba(255, 255, 255, .08);
     border-radius: 999px;
 }
 
@@ -258,9 +292,45 @@
     height: 100%;
     background: var(--primary);
     border-radius: inherit;
+    transition: width .4s ease;
 }
 
 .metric-note {
-    margin-top: .5rem;
+    margin-top: auto;
+    padding-top: 1rem;
+    color: var(--muted);
+    font-size: .82rem;
+    line-height: 1.5;
+}
+
+.uptime-indicator {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    color: var(--muted);
     font-size: .85rem;
+}
+
+.uptime-dot {
+    width: 9px;
+    height: 9px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(34, 197, 94, .65);
+}
+
+@media (max-width: 1050px) {
+    .metrics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 620px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metric-card {
+        min-height: 190px;
+    }
 }
