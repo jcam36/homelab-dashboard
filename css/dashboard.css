@@ -1,4 +1,47 @@
 /* =========================
+   Header
+========================= */
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.eyebrow {
+    margin-bottom: .5rem;
+    color: var(--primary);
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.site-header h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+}
+
+.subtitle {
+    max-width: 700px;
+    margin-top: 1rem;
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .25rem;
+    }
+}
+
+/* =========================
    Dashboard Layout
 ========================= */
 
@@ -59,4 +102,43 @@
     height: 10px;
     background: #22c55e;
     border-radius: 50%;
+}
+
+/* =========================
+   Dashboard Cards
+========================= */
+
+.dashboard-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: var(--primary);
+}
+
+.dashboard-card h3 {
+    font-size: 1.25rem;
+}
+
+.dashboard-card p {
+    margin-top: .5rem;
+}
+
+.dashboard-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .22);
+}
+
+.status-badge {
+    border: 1px solid var(--border);
+    font-weight: 700;
+}
+
+.status-dot {
+    box-shadow: 0 0 0 6px rgba(34, 197, 94, .12);
 }
