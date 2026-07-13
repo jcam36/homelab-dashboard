@@ -52,9 +52,16 @@
 }
 
 .dashboard-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+
     padding: .65rem 1rem;
+
     color: var(--muted);
+
     border-radius: 10px;
+
     font-size: .9rem;
     font-weight: 700;
 
@@ -76,6 +83,11 @@
     background: var(--surface);
     outline: 2px solid var(--primary);
     outline-offset: 2px;
+}
+
+.dashboard-nav i {
+    color: var(--primary);
+    font-size: .95rem;
 }
 
 /* =========================
