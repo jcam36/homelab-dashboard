@@ -70,49 +70,177 @@
             <div class="section-heading">
                 <h2>Server Overview</h2>
                 <p>Current homelab configuration</p>
-            </div>
-
-            <div class="card-grid">
-
-                <article class="dashboard-card">
-                    <p class="card-label">Hostname</p>
-
-                    <h3>homelab</h3>
-
-                    <p>
-                        Ubuntu Server virtual machine hosted on the Mac mini.
-                    </p>
-                </article>
-
-                <article class="dashboard-card">
-                    <p class="card-label">Operating System</p>
-
-                    <h3>Ubuntu Server 26.04</h3>
-
-                    <p>
-                        ARM64 virtual machine running in VMware Fusion.
-                    </p>
-                </article>
-
-                <article class="dashboard-card">
-                    <p class="card-label">Web Server</p>
-
-                    <h3>Nginx</h3>
-
-                    <p>
-                        Serving the homelab dashboard over HTTP.
-                    </p>
-                </article>
-
-                <article class="dashboard-card">
-                    <p class="card-label">Containers</p>
-
-                    <h3>Docker</h3>
-
-                    <p>
-                        Ready for containerized services and applications.
-                    </p>
-                </article>
+                </div>
+                
+                <div class="card-grid">
+                
+                    <article class="dashboard-card inventory-card">
+                    
+                        <div class="card-top-row">
+                            <div>
+                                <p class="card-label">
+                                    <i class="fa-solid fa-computer"></i>
+                                    Host Machine
+                                </p>
+                    
+                                <h3>Mac mini M4</h3>
+                            </div>
+                    
+                            <span class="card-status online">
+                                Online
+                            </span>
+                        </div>
+                    
+                        <p>
+                            Apple Silicon host running VMware Fusion.
+                        </p>
+                    
+                        <div class="card-role">
+                            <strong>Role</strong>
+                            <span>Virtualization Host</span>
+                        </div>
+                    
+                    </article>
+                    
+                    <article class="dashboard-card inventory-card">
+                    
+                        <div class="card-top-row">
+                            <div>
+                                <p class="card-label">
+                                    <i class="fa-solid fa-server"></i>
+                                    Virtual Machine
+                                </p>
+                    
+                                <h3>Ubuntu Server 26.04</h3>
+                            </div>
+                    
+                            <span class="card-status online">
+                                Running
+                            </span>
+                        </div>
+                    
+                        <p>
+                            ARM64 server used for development and administration.
+                        </p>
+                    
+                        <div class="card-role">
+                            <strong>Role</strong>
+                            <span>Primary Linux Server</span>
+                        </div>
+                    
+                    </article>
+                    
+                    <article class="dashboard-card inventory-card">
+                    
+                        <div class="card-top-row">
+                            <div>
+                                <p class="card-label">
+                                    <i class="fa-solid fa-globe"></i>
+                                    Web Server
+                                </p>
+                    
+                                <h3>Nginx</h3>
+                            </div>
+                    
+                            <span class="card-status online">
+                                Active
+                            </span>
+                        </div>
+                    
+                        <p>
+                            Serves the homelab dashboard directly from the project directory.
+                        </p>
+                    
+                        <div class="card-role">
+                            <strong>Role</strong>
+                            <span>HTTP Server</span>
+                        </div>
+                    
+                    </article>
+                    
+                    <article class="dashboard-card inventory-card">
+                    
+                        <div class="card-top-row">
+                            <div>
+                                <p class="card-label">
+                                    <i class="fa-brands fa-docker"></i>
+                                    Container Runtime
+                                </p>
+                    
+                                <h3>Docker</h3>
+                            </div>
+                    
+                            <span class="card-status">
+                                Planned
+                            </span>
+                        </div>
+                    
+                        <p>
+                            Container platform for future homelab services.
+                        </p>
+                    
+                        <div class="card-role">
+                            <strong>Role</strong>
+                            <span>Application Hosting</span>
+                        </div>
+                    
+                    </article>
+                    
+                    <article class="dashboard-card inventory-card">
+                    
+                        <div class="card-top-row">
+                            <div>
+                                <p class="card-label">
+                                    <i class="fa-solid fa-terminal"></i>
+                                    Remote Access
+                                </p>
+                    
+                                <h3>SSH</h3>
+                            </div>
+                    
+                            <span class="card-status online">
+                                Connected
+                            </span>
+                        </div>
+                    
+                        <p>
+                            VS Code Remote SSH and Ghostty terminal access.
+                        </p>
+                    
+                        <div class="card-role">
+                            <strong>Role</strong>
+                            <span>Remote Administration</span>
+                        </div>
+                    
+                    </article>
+                    
+                    <article class="dashboard-card inventory-card">
+                    
+                        <div class="card-top-row">
+                            <div>
+                                <p class="card-label">
+                                    <i class="fa-brands fa-github"></i>
+                                    Version Control
+                                </p>
+                    
+                                <h3>Git & GitHub</h3>
+                            </div>
+                    
+                            <span class="card-status online">
+                                Synced
+                            </span>
+                        </div>
+                    
+                        <p>
+                            Professional workflow using Git, GitHub, and meaningful commits.
+                        </p>
+                    
+                        <div class="card-role">
+                            <strong>Role</strong>
+                            <span>Source Control</span>
+                        </div>
+                    
+                    </article>
 
             </div>
 
