@@ -16,9 +16,11 @@
     <header class="site-header">
         <div>
             <p class="eyebrow">Home Server</p>
+
             <h1>Jose's Homelab Dashboard</h1>
+
             <p class="subtitle">
-                Ubuntu Server, Docker, Nginx, Networking, and Development Labs.
+                Ubuntu Server, Docker, Nginx, networking, and development labs.
             </p>
         </div>
 
@@ -28,13 +30,24 @@
         </div>
     </header>
 
+    <!-- =============================
+         Dashboard Navigation
+    ============================== -->
+
+    <nav class="dashboard-nav" aria-label="Dashboard navigation">
+        <a href="#server-overview">Overview</a>
+        <a href="#system-metrics">Metrics</a>
+        <a href="#lab-areas">Lab Areas</a>
+        <a href="#quick-links">Quick Links</a>
+    </nav>
+
     <main class="dashboard">
 
         <!-- =============================
              Server Overview
         ============================== -->
 
-        <section class="dashboard-section">
+        <section class="dashboard-section" id="server-overview">
 
             <div class="section-heading">
                 <h2>Server Overview</h2>
@@ -45,88 +58,132 @@
 
                 <article class="dashboard-card">
                     <p class="card-label">Hostname</p>
+
                     <h3>homelab</h3>
-                    <p>Ubuntu Server VM hosted on the Mac mini.</p>
+
+                    <p>
+                        Ubuntu Server virtual machine hosted on the Mac mini.
+                    </p>
                 </article>
 
                 <article class="dashboard-card">
                     <p class="card-label">Operating System</p>
+
                     <h3>Ubuntu Server 26.04</h3>
-                    <p>ARM64 virtual machine running in VMware Fusion.</p>
+
+                    <p>
+                        ARM64 virtual machine running in VMware Fusion.
+                    </p>
                 </article>
 
                 <article class="dashboard-card">
                     <p class="card-label">Web Server</p>
+
                     <h3>Nginx</h3>
-                    <p>Serving the homelab dashboard over HTTP.</p>
+
+                    <p>
+                        Serving the homelab dashboard over HTTP.
+                    </p>
                 </article>
 
                 <article class="dashboard-card">
                     <p class="card-label">Containers</p>
+
                     <h3>Docker</h3>
-                    <p>Ready for containerized services and applications.</p>
+
+                    <p>
+                        Ready for containerized services and applications.
+                    </p>
                 </article>
 
             </div>
 
         </section>
 
-        <section class="dashboard-section">
+        <!-- =============================
+             System Metrics
+        ============================== -->
+
+        <section class="dashboard-section" id="system-metrics">
+
             <div class="section-heading">
                 <h2>System Metrics</h2>
                 <p>Current server resource usage</p>
             </div>
 
             <div class="metrics-grid">
+
                 <article class="metric-card">
+
                     <div class="metric-card-header">
                         <span class="metric-label">CPU Usage</span>
                         <span class="metric-status status-normal">Normal</span>
                     </div>
 
-                    <strong class="metric-value" id="cpu-value">12%</strong>
+                    <strong class="metric-value" id="cpu-value">
+                        12%
+                    </strong>
 
-                    <div class="metric-bar" aria-label="CPU usage: 12 percent">
+                    <div class="metric-bar" role="progressbar" aria-label="CPU usage" aria-valuemin="0"
+                        aria-valuemax="100" aria-valuenow="12">
                         <div class="metric-fill" id="cpu-bar" style="width: 12%;">
                         </div>
                     </div>
 
-                    <p class="metric-note">Current processor load</p>
+                    <p class="metric-note">
+                        Current processor load
+                    </p>
+
                 </article>
 
                 <article class="metric-card">
+
                     <div class="metric-card-header">
                         <span class="metric-label">Memory Usage</span>
                         <span class="metric-status status-normal">Normal</span>
                     </div>
 
-                    <strong class="metric-value" id="memory-value">32%</strong>
+                    <strong class="metric-value" id="memory-value">
+                        32%
+                    </strong>
 
-                    <div class="metric-bar" aria-label="Memory usage: 32 percent">
+                    <div class="metric-bar" role="progressbar" aria-label="Memory usage" aria-valuemin="0"
+                        aria-valuemax="100" aria-valuenow="32">
                         <div class="metric-fill" id="memory-bar" style="width: 32%;">
                         </div>
                     </div>
 
-                    <p class="metric-note">System memory currently in use</p>
+                    <p class="metric-note">
+                        System memory currently in use
+                    </p>
+
                 </article>
 
                 <article class="metric-card">
+
                     <div class="metric-card-header">
                         <span class="metric-label">Disk Usage</span>
                         <span class="metric-status status-normal">Healthy</span>
                     </div>
 
-                    <strong class="metric-value" id="disk-value">28%</strong>
+                    <strong class="metric-value" id="disk-value">
+                        28%
+                    </strong>
 
-                    <div class="metric-bar" aria-label="Disk usage: 28 percent">
+                    <div class="metric-bar" role="progressbar" aria-label="Disk usage" aria-valuemin="0"
+                        aria-valuemax="100" aria-valuenow="28">
                         <div class="metric-fill" id="disk-bar" style="width: 28%;">
                         </div>
                     </div>
 
-                    <p class="metric-note">Primary storage utilization</p>
+                    <p class="metric-note">
+                        Primary storage utilization
+                    </p>
+
                 </article>
 
                 <article class="metric-card">
+
                     <div class="metric-card-header">
                         <span class="metric-label">System Uptime</span>
                         <span class="metric-status status-online">Online</span>
@@ -141,16 +198,21 @@
                         Server operating normally
                     </div>
 
-                    <p class="metric-note">Time since the last system restart</p>
+                    <p class="metric-note">
+                        Time since the last system restart
+                    </p>
+
                 </article>
+
             </div>
+
         </section>
 
         <!-- =============================
              Lab Areas
         ============================== -->
 
-        <section class="dashboard-section">
+        <section class="dashboard-section" id="lab-areas">
 
             <div class="section-heading">
                 <h2>Lab Areas</h2>
@@ -160,46 +222,69 @@
             <div class="card-grid">
 
                 <article class="dashboard-card status-card">
+
                     <div class="card-top-row">
-                        <p class="card-label">Hostname</p>
-                        <span class="card-status online">Online</span>
+                        <p class="card-label">Linux Administration</p>
+                        <span class="card-status online">Active</span>
                     </div>
 
-                    <h3>homelab</h3>
-                    <p>Ubuntu Server VM hosted on the Mac mini.</p>
+                    <h3>Ubuntu Server</h3>
+
+                    <p>
+                        Practice users, permissions, services, logs, storage,
+                        networking, and system administration.
+                    </p>
+
                 </article>
 
                 <article class="dashboard-card status-card">
-                    <div class="card-top-row">
-                        <p class="card-label">Operating System</p>
-                        <span class="card-status">ARM64</span>
-                    </div>
 
-                    <h3>Ubuntu Server 26.04</h3>
-                    <p>Running in VMware Fusion.</p>
-                </article>
-
-                <article class="dashboard-card status-card">
                     <div class="card-top-row">
-                        <p class="card-label">Web Server</p>
+                        <p class="card-label">Web Hosting</p>
                         <span class="card-status online">Running</span>
                     </div>
 
                     <h3>Nginx</h3>
-                    <p>Serving the homelab dashboard over HTTP.</p>
+
+                    <p>
+                        Host websites and learn server blocks, permissions,
+                        configuration files, and troubleshooting.
+                    </p>
+
                 </article>
 
                 <article class="dashboard-card status-card">
+
+                    <div class="card-top-row">
+                        <p class="card-label">Version Control</p>
+                        <span class="card-status online">Connected</span>
+                    </div>
+
+                    <h3>Git and GitHub</h3>
+
+                    <p>
+                        Track changes, create meaningful commits, manage
+                        repositories, and document projects.
+                    </p>
+
+                </article>
+
+                <article class="dashboard-card status-card">
+
                     <div class="card-top-row">
                         <p class="card-label">Containers</p>
-                        <span class="card-status online">Running</span>
+                        <span class="card-status">Upcoming</span>
                     </div>
 
                     <h3>Docker</h3>
-                    <p>Ready for containerized services and applications.</p>
+
+                    <p>
+                        Build and manage images, containers, networks, volumes,
+                        and multi-container applications.
+                    </p>
+
                 </article>
 
-            </div>
             </div>
 
         </section>
@@ -208,7 +293,7 @@
              Quick Links
         ============================== -->
 
-        <section class="dashboard-section">
+        <section class="dashboard-section" id="quick-links">
 
             <div class="section-heading">
                 <h2>Quick Links</h2>
@@ -217,33 +302,25 @@
 
             <div class="quick-links">
 
-                <a class="quick-link" href="https://github.com/jcam36" target="_blank">
-
+                <a class="quick-link" href="https://github.com/jcam36" target="_blank" rel="noopener noreferrer">
                     <span>GitHub</span>
                     <small>View repositories</small>
-
                 </a>
 
-                <a class="quick-link" href="http://192.168.74.129" target="_blank">
-
+                <a class="quick-link" href="http://192.168.74.129" target="_blank" rel="noopener noreferrer">
                     <span>Nginx Dashboard</span>
                     <small>Open this server</small>
-
                 </a>
 
-                <a class="quick-link disabled" href="#">
-
+                <div class="quick-link disabled" aria-disabled="true">
                     <span>Portainer</span>
                     <small>Coming Soon</small>
+                </div>
 
-                </a>
-
-                <a class="quick-link disabled" href="#">
-
+                <div class="quick-link disabled" aria-disabled="true">
                     <span>Grafana</span>
                     <small>Coming Soon</small>
-
-                </a>
+                </div>
 
             </div>
 
@@ -252,7 +329,9 @@
     </main>
 
     <footer class="site-footer">
-        <p>Built and hosted on Jose Camarena's Ubuntu Homelab.</p>
+        <p>
+            Built and hosted on Jose Camarena's Ubuntu homelab.
+        </p>
     </footer>
 
     <script src="js/script.js"></script>
@@ -261,3 +340,4 @@
 </body>
 
 </html>
+```
