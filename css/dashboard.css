@@ -531,6 +531,119 @@
     box-shadow: 0 0 10px rgba(34, 197, 94, .65);
 }
 
+/* =========================
+   System Information
+========================= */
+
+.system-info-panel {
+    padding: 1.5rem;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.system-info-panel:hover {
+    border-color: var(--primary);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .22);
+}
+
+.system-info-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.system-info-header > div:nth-child(2) {
+    flex: 1;
+}
+
+.system-info-header .card-label {
+    margin: 0 0 .25rem;
+}
+
+.system-info-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.system-info-icon {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+
+    width: 52px;
+    height: 52px;
+
+    color: var(--primary);
+    background: rgba(59, 130, 246, .12);
+    border-radius: 14px;
+
+    font-size: 1.3rem;
+}
+
+.system-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+}
+
+.system-info-item {
+    padding: 1rem;
+
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.system-info-item dt {
+    margin-bottom: .35rem;
+
+    color: var(--muted);
+
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.system-info-item dd {
+    color: var(--text);
+    font-size: .95rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.system-info-note {
+    margin-top: 1.25rem;
+    font-size: .82rem;
+}
+
+@media (max-width: 850px) {
+    .system-info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .system-info-header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .system-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* =========================
    Recent Activity

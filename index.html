@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,12 +10,18 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dashboard.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
+    <!-- =============================
+         Header
+    ============================== -->
+
     <header class="site-header">
+
         <div>
             <p class="eyebrow">Home Server</p>
 
@@ -29,6 +36,7 @@
             <span class="status-dot"></span>
             Homelab Online
         </div>
+
     </header>
 
     <!-- =============================
@@ -47,9 +55,19 @@
             <span>Metrics</span>
         </a>
 
+        <a href="#system-information">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>System Info</span>
+        </a>
+
         <a href="#lab-areas">
             <i class="fa-solid fa-flask"></i>
             <span>Lab Areas</span>
+        </a>
+
+        <a href="#recent-activity">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span>Activity</span>
         </a>
 
         <a href="#quick-links">
@@ -69,7 +87,7 @@
 
             <div class="section-heading">
                 <h2>Server Overview</h2>
-                <p>Current homelab configuration</p>
+                <p>Current homelab infrastructure</p>
             </div>
 
             <div class="card-grid">
@@ -77,6 +95,7 @@
                 <article class="dashboard-card inventory-card">
 
                     <div class="card-top-row">
+
                         <div>
                             <p class="card-label">
                                 <i class="fa-solid fa-computer"></i>
@@ -89,6 +108,7 @@
                         <span class="card-status online">
                             Online
                         </span>
+
                     </div>
 
                     <p>
@@ -105,6 +125,7 @@
                 <article class="dashboard-card inventory-card">
 
                     <div class="card-top-row">
+
                         <div>
                             <p class="card-label">
                                 <i class="fa-solid fa-server"></i>
@@ -117,6 +138,7 @@
                         <span class="card-status online">
                             Running
                         </span>
+
                     </div>
 
                     <p>
@@ -133,6 +155,7 @@
                 <article class="dashboard-card inventory-card">
 
                     <div class="card-top-row">
+
                         <div>
                             <p class="card-label">
                                 <i class="fa-solid fa-globe"></i>
@@ -145,6 +168,7 @@
                         <span class="card-status online">
                             Active
                         </span>
+
                     </div>
 
                     <p>
@@ -161,6 +185,7 @@
                 <article class="dashboard-card inventory-card">
 
                     <div class="card-top-row">
+
                         <div>
                             <p class="card-label">
                                 <i class="fa-brands fa-docker"></i>
@@ -173,6 +198,7 @@
                         <span class="card-status">
                             Planned
                         </span>
+
                     </div>
 
                     <p>
@@ -189,6 +215,7 @@
                 <article class="dashboard-card inventory-card">
 
                     <div class="card-top-row">
+
                         <div>
                             <p class="card-label">
                                 <i class="fa-solid fa-terminal"></i>
@@ -201,6 +228,7 @@
                         <span class="card-status online">
                             Connected
                         </span>
+
                     </div>
 
                     <p>
@@ -217,6 +245,7 @@
                 <article class="dashboard-card inventory-card">
 
                     <div class="card-top-row">
+
                         <div>
                             <p class="card-label">
                                 <i class="fa-brands fa-github"></i>
@@ -229,6 +258,7 @@
                         <span class="card-status online">
                             Synced
                         </span>
+
                     </div>
 
                     <p>
@@ -355,6 +385,85 @@
         </section>
 
         <!-- =============================
+             System Information
+        ============================== -->
+
+        <section class="dashboard-section" id="system-information">
+
+            <div class="section-heading">
+                <h2>System Information</h2>
+                <p>Server identity and operating environment</p>
+            </div>
+
+            <div class="system-info-panel">
+
+                <div class="system-info-header">
+
+                    <div class="system-info-icon">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+
+                    <div>
+                        <p class="card-label">Primary Linux Server</p>
+
+                        <h3 id="system-hostname">
+                            homelab
+                        </h3>
+
+                        <p>
+                            Ubuntu Server virtual machine
+                        </p>
+                    </div>
+
+                    <span class="card-status online">
+                        Online
+                    </span>
+
+                </div>
+
+                <dl class="system-info-grid">
+
+                    <div class="system-info-item">
+                        <dt>Operating System</dt>
+                        <dd id="system-os">Ubuntu Server 26.04</dd>
+                    </div>
+
+                    <div class="system-info-item">
+                        <dt>Kernel</dt>
+                        <dd id="system-kernel">Placeholder</dd>
+                    </div>
+
+                    <div class="system-info-item">
+                        <dt>Architecture</dt>
+                        <dd id="system-architecture">ARM64</dd>
+                    </div>
+
+                    <div class="system-info-item">
+                        <dt>Local IP Address</dt>
+                        <dd id="system-ip">192.168.74.129</dd>
+                    </div>
+
+                    <div class="system-info-item">
+                        <dt>Logged-in User</dt>
+                        <dd id="system-user">jose</dd>
+                    </div>
+
+                    <div class="system-info-item">
+                        <dt>Virtualization</dt>
+                        <dd id="system-virtualization">VMware Fusion</dd>
+                    </div>
+
+                </dl>
+
+                <p class="system-info-note">
+                    Values are placeholders until live Linux integration is added.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- =============================
              Lab Areas
         ============================== -->
 
@@ -370,12 +479,16 @@
                 <article class="lab-card">
 
                     <div class="lab-card-top">
+
                         <div>
                             <p class="card-label">Linux Administration</p>
                             <h3>Ubuntu Server</h3>
                         </div>
 
-                        <span class="card-status online">Active</span>
+                        <span class="card-status online">
+                            Active
+                        </span>
+
                     </div>
 
                     <p class="lab-description">
@@ -413,12 +526,16 @@
                 <article class="lab-card">
 
                     <div class="lab-card-top">
+
                         <div>
                             <p class="card-label">Web Hosting</p>
                             <h3>Nginx</h3>
                         </div>
 
-                        <span class="card-status online">Running</span>
+                        <span class="card-status online">
+                            Running
+                        </span>
+
                     </div>
 
                     <p class="lab-description">
@@ -456,12 +573,16 @@
                 <article class="lab-card">
 
                     <div class="lab-card-top">
+
                         <div>
                             <p class="card-label">Version Control</p>
                             <h3>Git and GitHub</h3>
                         </div>
 
-                        <span class="card-status online">Connected</span>
+                        <span class="card-status online">
+                            Connected
+                        </span>
+
                     </div>
 
                     <p class="lab-description">
@@ -499,12 +620,16 @@
                 <article class="lab-card">
 
                     <div class="lab-card-top">
+
                         <div>
                             <p class="card-label">Containers</p>
                             <h3>Docker</h3>
                         </div>
 
-                        <span class="card-status">Upcoming</span>
+                        <span class="card-status">
+                            Upcoming
+                        </span>
+
                     </div>
 
                     <p class="lab-description">
@@ -543,10 +668,9 @@
 
         </section>
 
-
         <!-- =============================
-     Recent Activity
-============================== -->
+             Recent Activity
+        ============================== -->
 
         <section class="dashboard-section" id="recent-activity">
 
@@ -558,6 +682,7 @@
             <div class="activity-list">
 
                 <article class="activity-item">
+
                     <div class="activity-icon">
                         <i class="fa-brands fa-github"></i>
                     </div>
@@ -567,10 +692,14 @@
                         <p>Added responsive system metrics cards.</p>
                     </div>
 
-                    <time>Today</time>
+                    <time datetime="2026-07-13">
+                        Today
+                    </time>
+
                 </article>
 
                 <article class="activity-item">
+
                     <div class="activity-icon">
                         <i class="fa-solid fa-server"></i>
                     </div>
@@ -580,10 +709,14 @@
                         <p>Dashboard is being served successfully.</p>
                     </div>
 
-                    <time>Today</time>
+                    <time datetime="2026-07-13">
+                        Today
+                    </time>
+
                 </article>
 
                 <article class="activity-item">
+
                     <div class="activity-icon">
                         <i class="fa-solid fa-code-branch"></i>
                     </div>
@@ -593,10 +726,14 @@
                         <p>Committed dashboard improvements.</p>
                     </div>
 
-                    <time>1 hour ago</time>
+                    <time datetime="2026-07-13T15:00">
+                        1 hour ago
+                    </time>
+
                 </article>
 
                 <article class="activity-item">
+
                     <div class="activity-icon">
                         <i class="fa-solid fa-terminal"></i>
                     </div>
@@ -606,7 +743,10 @@
                         <p>Remote development session started.</p>
                     </div>
 
-                    <time>2 hours ago</time>
+                    <time datetime="2026-07-13T14:00">
+                        2 hours ago
+                    </time>
+
                 </article>
 
             </div>
@@ -651,6 +791,10 @@
         </section>
 
     </main>
+
+    <!-- =============================
+         Footer
+    ============================== -->
 
     <footer class="site-footer">
         <p>
