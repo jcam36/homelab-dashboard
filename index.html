@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -757,33 +757,103 @@
              Quick Links
         ============================== -->
 
+    
+        <!-- =============================
+     Quick Links
+============================== -->
+
         <section class="dashboard-section" id="quick-links">
 
             <div class="section-heading">
                 <h2>Quick Links</h2>
-                <p>Frequently used homelab resources</p>
+                <p>Frequently used homelab services and resources</p>
             </div>
 
-            <div class="quick-links">
+            <div class="service-links-grid">
+                <a class="service-link-card" href="https://github.com/jcam36" target="_blank" rel="noopener noreferrer">
+                    <div class="service-link-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
 
-                <a class="quick-link" href="https://github.com/jcam36" target="_blank" rel="noopener noreferrer">
-                    <span>GitHub</span>
-                    <small>View repositories</small>
+                    <div class="service-link-content">
+                        <div class="service-link-heading">
+                            <h3>GitHub</h3>
+                            <span class="service-status available">Available</span>
+                        </div>
+
+                        <p>
+                            View source code, repositories, commits, and project documentation.
+                        </p>
+
+                        <span class="service-destination">
+                            github.com/jcam36
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </span>
+                    </div>
                 </a>
 
-                <a class="quick-link" href="http://192.168.74.129" target="_blank" rel="noopener noreferrer">
-                    <span>Nginx Dashboard</span>
-                    <small>Open this server</small>
+                <a class="service-link-card" href="http://192.168.74.129" target="_blank" rel="noopener noreferrer">
+                    <div class="service-link-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+
+                    <div class="service-link-content">
+                        <div class="service-link-heading">
+                            <h3>Nginx Dashboard</h3>
+                            <span class="service-status available">Online</span>
+                        </div>
+
+                        <p>
+                            Open the dashboard currently hosted by the Ubuntu Server.
+                        </p>
+
+                        <span class="service-destination">
+                            192.168.74.129
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </span>
+                    </div>
                 </a>
 
-                <div class="quick-link disabled" aria-disabled="true">
-                    <span>Portainer</span>
-                    <small>Coming Soon</small>
+                <div class="service-link-card disabled" aria-disabled="true">
+                    <div class="service-link-icon">
+                        <i class="fa-brands fa-docker"></i>
+                    </div>
+
+                    <div class="service-link-content">
+                        <div class="service-link-heading">
+                            <h3>Portainer</h3>
+                            <span class="service-status planned">Planned</span>
+                        </div>
+
+                        <p>
+                            Manage Docker containers, images, volumes, and networks.
+                        </p>
+
+                        <span class="service-destination">
+                            Not installed
+                        </span>
+                    </div>
                 </div>
 
-                <div class="quick-link disabled" aria-disabled="true">
-                    <span>Grafana</span>
-                    <small>Coming Soon</small>
+                <div class="service-link-card disabled" aria-disabled="true">
+                    <div class="service-link-icon">
+                        <i class="fa-solid fa-chart-column"></i>
+                    </div>
+
+                    <div class="service-link-content">
+                        <div class="service-link-heading">
+                            <h3>Grafana</h3>
+                            <span class="service-status planned">Planned</span>
+                        </div>
+
+                        <p>
+                            View historical performance metrics and monitoring dashboards.
+                        </p>
+
+                        <span class="service-destination">
+                            Not installed
+                        </span>
+                    </div>
                 </div>
 
             </div>
@@ -808,4 +878,3 @@
 </body>
 
 </html>
-```
